@@ -1,0 +1,72 @@
+:root {
+    --bg-color: #131314;
+    --card-bg: #1e1f20;        /* Card Background */
+    --text-main: #e3e3e3;
+    --text-muted: #9aa0a6;
+    --border-color: #3c4043;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-main) !important;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.gemini-gradient-text {
+    background: linear-gradient(70deg, #4285f4, #9b51e0, #ea4335);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gemini-card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 16px !important;
+    transition: all 0.3s ease;
+}
+
+.gemini-card:hover {
+    transform: translateY(-5px);
+    border-color: #747775 !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.gemini-btn {
+    background-color: #1e1f20;
+    color: #c4c7c5 !important;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.gemini-btn:hover {
+    background-color: #2b2c2e;
+    border-color: #a8c7fa;
+    color: #fff !important;
+}
+/* Coding Profile Stats Card */
+.stat-box {
+    background: #1e1f20;
+    border: 1px solid #3c4043;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a8c7fa; /* Light blue glow color */
+}
+/* Contact Links */
+.contact-link {
+    color: #e3e3e3;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.2s;
+}
+.contact-link:hover {
+    color: #a8c7fa;
+}

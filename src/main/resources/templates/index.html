@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="container text-center py-5 my-5">
+    <h1 class="display-3 fw-bold">Hello, I'm <span class="gemini-gradient-text" th:text="${myName}">Name</span></h1>
+    <p class="lead text-muted fs-4 mt-3"> </p>
+</div>
+
+<!-- About Section (Akshit's Profile) -->
+<div class="container my-5">
+    <div class="card gemini-card p-4">
+        <div class="card-body">
+            <h2 class="mb-4 fw-semibold text-light border-bottom border-secondary pb-2">About Me</h2>
+
+            <!-- Intro Paragraph -->
+            <p class="lead text-muted fs-5 mb-4">
+                Hello! I'm <strong class="text-light" th:text="${myName}">Akshit Tyagi</strong>, a Computer Science Engineering student at <strong>ABES Engineering College</strong>. I focus on backend development, focusing on creating efficient, structured, and scalable server-side applications.
+            </p>
+
+            <!-- What I Bring to the Table -->
+            <h4 class="text-light fw-medium mb-3">What I Bring to the Table:</h4>
+            <ul class="list-unstyled text-muted fs-6 ps-2">
+                <li class="mb-2"><span class="text-primary fw-bold">&#9656;</span> <strong class="text-light">Language of Choice:</strong> Proficient in Java.</li>
+                <li class="mb-2"><span class="text-primary fw-bold">&#9656;</span> <strong class="text-light">API Development:</strong> Experienced in designing APIs and handling API integration/calling.</li>
+                <li class="mb-2"><span class="text-primary fw-bold">&#9656;</span> <strong class="text-light">Frameworks:</strong> Hands-on experience with Spring Boot (recently built a standalone Chatbot application).</li>
+            </ul>
+
+            <!-- Call to Action -->
+            <p class="text-muted mt-4 mb-0 fst-italic">
+                I am always looking to connect with fellow developers and industry professionals. Let's build something cool together!
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Projects Grid -->
+<div class="container my-5">
+    <h2 class="mb-4 fw-semibold text-light">Featured Projects</h2>
+    <div class="row">
+        <!-- Loop -->
+        <div class="col-md-4 mb-4" th:each="project : ${projectsList}">
+            <div class="card h-100 gemini-card p-3">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="text-light fw-bold mb-3" th:text="${project.title}">Project Title</h5>
+                        <p class="text-muted" th:text="${project.description}">Description</p>
+                    </div>
+                    <div class="mt-4">
+                        <a th:href="${project.githubLink}" target="_blank" class="gemini-btn w-100 text-center">View Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coding Profiles Stats Section -->
+        <div class="container my-5">
+            <h2 class="mb-4 fw-semibold text-light">Coding Profiles</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="stat-box">
+                        <h5 class="text-muted">LeetCode Questions Solved</h5>
+                        <div class="stat-number" th:text="${leetcodeCount}">0</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="stat-box">
+                        <h5 class="text-muted">CodeChef Contests/Problems</h5>
+                        <div class="stat-number" th:text="${codechefCount}">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section Footer -->
+        <footer class="container text-center py-5 my-5 border-top border-secondary">
+            <h4 class="mb-3 text-light">Connect With Me</h4>
+            <div class="d-flex justify-content-center">
+                <!-- Mail Link -->
+                <a th:href="'mailto:' + ${gmailId}" class="contact-link">
+                    Gmail
+                </a>
+                <!-- LinkedIn Link -->
+                <a th:href="${linkedinUrl}" target="_blank" class="contact-link">
+                    LinkedIn
+                </a>
+            </div>
+            <p class="text-muted mt-4 small">&copy; 2026 My Portfolio. Powered by Spring Boot.</p>
+        </footer>
+
+
+    </div>
+</div>
+
+</body>
+</html>
