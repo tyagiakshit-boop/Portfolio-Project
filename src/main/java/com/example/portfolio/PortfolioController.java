@@ -13,7 +13,7 @@ public class PortfolioController {
         // Hardcoded Projects List
         List<Project> myProjects = new ArrayList<>();
         myProjects.add(new Project(" Chat Bot ", "Spring Boot REST API , API Calling ,Telegram dependencies.", "https://github.com/tyagiakshit-boop/CHAT-BOT-"));
-        myProjects.add(new Project("Developer Portfolio", "Professional Portfolio of mine using spring boot and java in backend.", "https://github.com"));
+        myProjects.add(new Project("Developer Portfolio", "Professional Portfolio of mine using spring boot and java in backend.", "https://github.com/tyagiakshit-boop/Portfolio-Project.git"));
 
         // Data ko HTML me bhejna
         model.addAttribute("myName", "AKSHIT TYAGI");
