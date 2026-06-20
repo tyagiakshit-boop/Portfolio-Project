@@ -1,4 +1,4 @@
-# 🚀 Akshit Tyagi - Professional Java Developer Portfolio
+# 🚀  Professional Java Developer Portfolio
 
 Welcome to my portfolio website built using **Java (Spring Boot)** and styled with a premium **Google Gemini Dark Theme**. This project showcases my skills, coding profile stats, and recent backend/full-stack projects.
 
